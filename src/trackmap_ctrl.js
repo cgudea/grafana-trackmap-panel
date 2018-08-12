@@ -124,7 +124,7 @@ export class TrackMapCtrl extends MetricsPanelCtrl {
 
     // Define layers and add them to the control widget
     L.control.layers({
-      'DarkCartoDB': L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+      'DarkCartoDB': L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://carto.com/attribution/">Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.</a>',
         maxZoom: 19
       }).addTo(this.leafMap), // Add default layer to map
