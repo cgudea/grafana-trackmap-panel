@@ -124,14 +124,18 @@ export class TrackMapCtrl extends MetricsPanelCtrl {
 
     // Define layers and add them to the control widget
     L.control.layers({
-      'DarkCartoDB': L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+      'Carto Dark': L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://carto.com/attribution/">CartoDB</a>',
         maxZoom: 19
       }).addTo(this.leafMap), // Add default layer to map
-      'OpenStreetMap': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      'Carto Light': L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://carto.com/attribution/">CartoDB</a>',
         maxZoom: 19
-      }).addTo(this.leafMap), // Add default layer to map
+      }),
+      'Carto Watercolor': L.tileLayer('http://c.tile.stamen.com/watercolor/${z}/${x}/${y}.jpg', {
+        attribution: '&copy; <a href="https://carto.com/attribution/">CartoDB</a>',
+        maxZoom: 19
+      }),
       'OpenTopoMap': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
         maxZoom: 17
@@ -146,7 +150,7 @@ export class TrackMapCtrl extends MetricsPanelCtrl {
         })
       })
     }).addTo(this.leafMap);
-
+    
     // Dummy hovermarker
     this.hoverMarker = L.circleMarker(L.latLng(0, 0), {
       color: 'none',
