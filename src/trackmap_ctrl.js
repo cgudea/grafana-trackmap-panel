@@ -132,8 +132,9 @@ export class TrackMapCtrl extends MetricsPanelCtrl {
         attribution: '&copy; <a href="https://carto.com/attribution/">CartoDB</a>',
         maxZoom: 19
       }),
-      'Carto Watercolor': L.tileLayer('http://c.tile.stamen.com/watercolor/${z}/${x}/${y}.jpg', {
-        attribution: '&copy; <a href="https://carto.com/attribution/">CartoDB</a>',
+      'Stamen Watercolor': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://stamen.com">Stamen Design</a>',\
+        subdomains: 'abcd',
         maxZoom: 19
       }),
       'OpenTopoMap': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
