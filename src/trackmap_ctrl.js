@@ -133,7 +133,7 @@ export class TrackMapCtrl extends MetricsPanelCtrl {
         maxZoom: 19
       }),
       'Stamen Watercolor': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://stamen.com">Stamen Design</a>',\
+        attribution: '&copy; <a href="http://stamen.com">Stamen Design</a>',
         subdomains: 'abcd',
         maxZoom: 19
       }),
